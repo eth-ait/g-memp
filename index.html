@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="G-MEMP: Gaze-Enhanced Multimodal Ego-Motion Prediction in Driving">
+  <meta name="keywords" content="ldmoa">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G-MEMP: Gaze-Enhanced Multimodal Ego-Motion Prediction in Driving</title>
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-72PW1FZDE4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-72PW1FZDE4');
+  </script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">G-MEMP: Gaze-Enhanced Multimodal Ego-Motion Prediction in Driving</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/meakbiyik">M. Eren Akbiyik</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a>Nedko Savov</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a>Danda Pani Paudel</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a>Nikola Popovic</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a>Christian Vater</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://ait.ethz.ch/people/hilliges">Otmar Hilliges</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html/">Luc Van Gool</a><sup>1,2</sup>,</span>
+             <span class="author-block">
+              <a href="https://ait.ethz.ch/people/xiwang">Xi Wang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ETH Zurich, Switzerland</span>
+            <br>       
+            <span class="author-block"><sup>2</sup>INSAIT, Sofia University</span>
+            <br>       
+            <span class="author-block">  <b>In tbd, 2024.</b></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!--
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2306.16545"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              -->
+              <!--
+              <span class="link-block">
+                <a href="https://github.com/DanDoge/Palm"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-code"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              -->
+              <!-- Video Link. -->
+<!--               <span class="link-block">
+                <a href="https://youtu.be/YB1_xKlueUI"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <div class="diagram">
+        <img src="static/images/framework.png" alt="Framework" height="600" width="600" />
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Understanding the decision-making process of drivers is one of the keys to ensuring road safety. While the driver intent and the resulting ego-motion trajectory is valuable in developing driver-assistance systems, existing methods mostly focus on the motions of other vehicles. In contrast, we focus on inferring the ego-trajectory of a driver's vehicle using their gaze data. For this purpose, we first collect a new dataset, GEM, which contains high-fidelity ego-motion videos paired with drivers' eye-tracking data and GPS coordinates. Next, we develop G-MEMP, a novel multimodal ego-trajectory prediction network that combines GPS and video input with gaze data. We also propose a new metric called Path Complexity Index (PCI) to measure the trajectory complexity. We perform extensive evaluations of the proposed method on both GEM and DR(eye)VE, an existing benchmark dataset. The results show that G-MEMP significantly outperforms state-of-the-art methods in both benchmarks. Furthermore, ablation studies demonstrate over 20% improvement in average displacement using gaze data, particularly in challenging driving scenarios with a high PCI. The data, code, and models will be made public.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section_video">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe lass="embed-responsive-item "width="960" height="520" src="./static/images/presentation.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <h2 class="subtitle has-text-centered">
+          We present G-MEMP, a novel multimodal ego-trajectory prediction network that combines GPS and video input with gaze data.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{tbd,
+  title={G-MEMP: Gaze-Enhanced Multimodal Ego-Motion Prediction in Driving},
+  author={M. Eren Akbiyik, Nedko Savov, Danda Pani Paudel, Nikola Popovic, Christian Vater, Otmar Hilliges, Luc Van Gool, Xi Wang},
+  booktitle={tbd},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+
+</body>
+</html>
